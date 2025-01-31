@@ -1,0 +1,16 @@
+# 构建产物
+/build/
+/out/
+/bin/
+
+# vcpkg 二进制缓存
+/vcpkg/installed/
+/vcpkg/buildtrees/
+/vcpkg/packages/
+/vcpkg/downloads/
+
+# 系统文件
+*.user
+*.suo
+*.log
+*.DS_Store
