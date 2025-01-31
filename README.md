@@ -15,5 +15,8 @@ LLVM ToolChain
 
 ## Editor
 1. VSCode
+    - launch.json
+    - settings.json
+    - tasks.json
 2. 
 3. 
