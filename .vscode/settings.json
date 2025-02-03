@@ -13,7 +13,6 @@
         "--query-driver=clang++", 
         "--header-insertion=iwyu",
         "--completion-style=detailed",
-        "--log=indexer", 
         "--pretty"
     ]
 }
