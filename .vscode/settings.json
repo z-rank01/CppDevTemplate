@@ -7,7 +7,6 @@
     // 禁用 VS Code 默认的 C++ 插件（避免与 Clangd 冲突）
     "C_Cpp.intelliSenseEngine": "disabled",
     // 配置 Clangd
-    "clangd.path": "clangd",
     "clangd.arguments": [
         "--background-index",
         "--clang-tidy",
