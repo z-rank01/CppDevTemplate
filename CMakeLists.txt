@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20)
 # TODO 1: 自定义项目名称
-project(ProjectName LANGUAGES CXX)
+# project(ProjectName LANGUAGES CXX)
 
 # 启用 C++20 标准
 set(CMAKE_CXX_STANDARD 20)
