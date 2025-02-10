@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "cppvsdbg",
+        "request": "launch",
+        "name": "Launch Program",
+        "program": "${workspaceFolder}/build/${input:buildType}/${input:executableName}.exe",
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "stopAtEntry": false,
+        "preLaunchTask": "CMake: build"
+      }
+    ],
+    "inputs": [
+      {
+        "type": "pickString",
+        "id": "buildType",
+        "description": "Choose build type",
+        "options": [
+          "Debug",
+          "Release"
+        ],
+        "default": "Debug"
+      },
+      {
+        "type": "promptString",
+        "id": "executableName",
+        "description": "Enter executable name (without .exe)",
+        "default": "main"
+      }
+    ]
+  }

@@ -4,12 +4,9 @@
       {
         "name": "base",
         "hidden": true,
-        "generator": "Ninja",
         "binaryDir": "${sourceDir}/build",
         "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
         "cacheVariables": {
-          "CMAKE_C_COMPILER": "clang",
-          "CMAKE_CXX_COMPILER": "clang++",
           "CMAKE_BUILD_TYPE": "Debug",
           "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
         }
@@ -20,6 +17,22 @@
         "displayName": "Windows Clang",
         "environment": {
           "VCPKG_DEFAULT_TRIPLET": "x64-windows-clang"
+        }, 
+        "cacheVariables": {
+          "CMAKE_C_COMPILER": "clang",
+          "CMAKE_CXX_COMPILER": "clang++"
+      }
+      },
+      {
+        "name": "windows-msvc",
+        "inherits": "base",
+        "displayName": "Windows MSVC",
+        "environment": {
+          "VCPKG_DEFAULT_TRIPLET": "x64-windows"
+        },
+        "cacheVariables": {
+          "CMAKE_C_COMPILER": "cl",
+          "CMAKE_CXX_COMPILER": "cl"
         }
       },
       {
@@ -28,6 +41,10 @@
         "displayName": "Linux Clang",
         "environment": {
           "VCPKG_DEFAULT_TRIPLET": "x64-linux"
+        },
+        "cacheVariables": {
+          "CMAKE_C_COMPILER": "clang",
+          "CMAKE_CXX_COMPILER": "clang++"
         }
       },
       {
@@ -41,6 +58,10 @@
           "apple": {
             "enableMetal": true
           }
+        },
+        "cacheVariables": {
+          "CMAKE_C_COMPILER": "clang",
+          "CMAKE_CXX_COMPILER": "clang++"
         }
       }
     ]
