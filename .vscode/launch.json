@@ -9,7 +9,6 @@
         "args": [],
         "cwd": "${workspaceFolder}",
         "stopAtEntry": false,
-        "preLaunchTask": "CMake: build"
       }
     ],
     "inputs": [
