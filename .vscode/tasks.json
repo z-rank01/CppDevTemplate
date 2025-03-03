@@ -2,40 +2,40 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "cmake: configure", // 任务名称（用户可见）
-      "type": "shell", // 任务类型（shell 表示在终端中运行）
-      "command": "cmake", // 主命令（调用 CMake）
+      "label": "cmake: configure",
+      "type": "shell",
+      "command": "cmake",
       "args": [
-        "--preset", // 参数 1：指定 CMake 预设
-        "${input:cmakePreset}", // 动态输入变量（用户选择预设）
-        "-B", // 参数 2：指定构建目录
-        "${workspaceFolder}/build" // 构建目录路径（固定为项目根目录下的 build）
+        "--preset",
+        "${input:cmakePreset}",
+        "-B",
+        "${workspaceFolder}/build"
       ],
       "options": {
-        "cwd": "${workspaceFolder}" // 工作目录设置为项目根目录
+        "cwd": "${workspaceFolder}"
       },
-      "group": { // 任务分组
-        "kind": "build", // 属于 "build" 组
-        "isDefault": true // 设为默认构建任务（可通过 Ctrl+Shift+B 触发）
+      "group": {
+        "kind": "build",
+        "isDefault": true
       }
     },
     {
-      "label": "cmake: build", // 任务名称（用户可见）
-      "type": "shell", // 任务类型
-      "command": "cmake", // 主命令（调用 CMake）
+      "label": "cmake: build",
+      "type": "shell",
+      "command": "cmake",
       "args": [
-        "--build", // 参数 1：执行构建操作
-        "${workspaceFolder}/build", // 参数 2：构建目录路径
-        "--config", // 参数 3：指定构建类型
-        "${input:buildType}" // 动态输入变量（用户选择 Debug/Release）
+        "--build",
+        "${workspaceFolder}/build",
+        "--config",
+        "${input:buildType}"
       ],
       "options": {
-        "cwd": "${workspaceFolder}" // 工作目录
+        "cwd": "${workspaceFolder}"
       },
-      "group": "build" // 属于 "build" 组（非默认）
+      "group": "build"
     },
     {
-      "label": "vcpkg: initialize", // 初始化 vcpkg 任务
+      "label": "vcpkg: initialize",
       "type": "shell",
       "command": "git clone git@github.com:microsoft/vcpkg.git && ${workspaceFolder}/vcpkg/bootstrap-vcpkg.bat",
       "options": {
@@ -48,12 +48,11 @@
       "problemMatcher": []
     },
     {
-      "label": "vcpkg: install dependencies", // 安装依赖库任务
+      "label": "vcpkg: install dependencies",
       "type": "shell",
       "command": "${workspaceFolder}/vcpkg/vcpkg",
       "args": [
         "install",
-        // TODO: 添加依赖库名称
         "--triplet",
         "${input:vcpkgTriplet}"
       ],
@@ -64,20 +63,20 @@
       "problemMatcher": []
     }
   ],
-  "inputs": [ // 定义动态输入参数
+  "inputs": [
     {
-      "id": "cmakePreset", // 输入 ID（与任务中的 ${input:cmakePreset} 对应）
-      "type": "pickString", // 输入类型：下拉选择
+      "id": "cmakePreset",
+      "type": "pickString",
       "description": "Select CMake Preset:",
       "options": [
         "windows-clang",
         "linux-clang",
         "macos-clang"
-      ], // 可选项
-      "default": "windows-clang" // 默认值
+      ],
+      "default": "windows-clang"
     },
     {
-      "id": "buildType", // 输入 ID（构建类型）
+      "id": "buildType",
       "type": "pickString",
       "description": "Select Build Type:",
       "options": [
