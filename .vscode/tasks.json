@@ -33,6 +33,28 @@
           "cwd": "${workspaceFolder}"     // 工作目录
         },
         "group": "build"                  // 属于 "build" 组（非默认）
+      }, 
+      {
+        "label": "vcpkg: initialize",     // 初始化 vcpkg 任务
+        "type": "shell",
+        "command": "${workspaceFolder}/vcpkg/bootstrap-vcpkg.${input:bootstrapScript}",
+        "group": "none",
+      },
+      {
+        "label": "vcpkg: install dependencies",  // 安装依赖库任务
+        "type": "shell",
+        "command": "${workspaceFolder}/vcpkg/vcpkg",
+        "args": [
+          "install",
+          // TODO: 添加依赖库名称
+          "--triplet",
+          "${input:vcpkgTriplet}"
+        ],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "group": "none",
+        "problemMatcher": []
       }
     ],
     "inputs": [                           // 定义动态输入参数
