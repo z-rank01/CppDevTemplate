@@ -4,10 +4,8 @@
 /bin/
 
 # vcpkg 二进制缓存
-/vcpkg/installed/
-/vcpkg/buildtrees/
-/vcpkg/packages/
-/vcpkg/downloads/
+/vcpkg/
+/vcpkg_installed/
 
 # 系统文件
 *.user
