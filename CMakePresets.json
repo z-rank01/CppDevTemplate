@@ -3,12 +3,14 @@
   "configurePresets": [
     {
       "name": "base",
+      "generator": "Ninja",
       "hidden": true,
       "binaryDir": "${sourceDir}/build",
       "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON", 
+         "CMAKE_MAKE_PROGRAM": "C:/Program Files/Ninja/ninja.exe"
       }
     },
     {
