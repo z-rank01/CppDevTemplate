@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "cppdbg",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/build/${input:buildType}/${input:executableName}.exe",
+      "args": [],
+      "cwd": "${workspaceFolder}/build",
+    }
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "executableName",
+      "description": "Enter executable name (without .exe)",
+      "default": "VulkanEngine"
+    },
+    {
+      "type": "pickString",
+      "id": "buildType",
+      "description": "Select build type",
+      "options": ["Debug", "Release", ""],
+      "default": "None"
+    }
+  ]
+}
