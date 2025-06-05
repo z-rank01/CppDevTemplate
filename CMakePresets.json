@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "version": 3,
   "configurePresets": [
     {
@@ -113,6 +114,20 @@
       "vendor": {
         "microsoft.com/VisualStudioSettings/CMake/1.0": {
           "intelliSenseMode": "windows-msvc-x64"
+=======
+    "version": 3,
+    "configurePresets": [
+      {
+        "name": "base",
+        "hidden": true,
+        "generator": "Ninja",
+        "binaryDir": "${sourceDir}/build",
+        "toolchainFile": "${sourceDir}/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "cacheVariables": {
+          "CMAKE_BUILD_TYPE": "Debug",
+          "CMAKE_EXPORT_COMPILE_COMMANDS": "ON", 
+          "CMAKE_MAKE_PROGRAM": "ninja"
+>>>>>>> ac7ed98dc79e793f837119fc066c9dc4071ae498
         }
       }
     }

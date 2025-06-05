@@ -3,6 +3,7 @@
 /out/
 /bin/
 
+<<<<<<< HEAD
 # visual studio 缓存
 /.vs/
 
@@ -10,6 +11,9 @@
 /.cache/
 
 # vcpkg
+=======
+# vcpkg 二进制缓存
+>>>>>>> ac7ed98dc79e793f837119fc066c9dc4071ae498
 /vcpkg/
 /vcpkg_installed/
 
