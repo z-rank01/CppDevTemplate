@@ -1,0 +1,137 @@
+---
+# 微软 C++ 代码风格配置
+# 基于 Microsoft C++ 编码规范
+
+# 基础风格
+BasedOnStyle: Microsoft
+
+# 缩进宽度（微软标准为4个空格）
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+
+# 大括号风格（Allman风格，左大括号换行）
+BreakBeforeBraces: Allman
+
+# 列限制
+ColumnLimit: 120
+
+# 访问修饰符缩进
+AccessModifierOffset: -4
+
+# 对齐参数
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: Consecutive
+AlignConsecutiveBitFields: Consecutive
+AlignConsecutiveDeclarations: None
+AlignConsecutiveMacros: Consecutive
+AlignEscapedNewlines: Right
+AlignOperands: Align
+AlignTrailingComments: true
+
+# 允许短代码放在单行
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Inline
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Inline
+AllowShortLoopsOnASingleLine: false
+
+# 函数声明与定义的格式
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+AlwaysBreakTemplateDeclarations: Yes
+
+# 参数打包
+BinPackArguments: false
+BinPackParameters: false
+
+# 位域冒号对齐
+BitFieldColonSpacing: Both
+
+# 构造函数初始化列表格式
+BreakBeforeConceptDeclarations: true
+BreakBeforeTernaryOperators: true
+BreakConstructorInitializers: BeforeColon
+BreakInheritanceList: BeforeColon
+BreakStringLiterals: true
+
+# C++风格
+Cpp11BracedListStyle: true
+
+# 派生指针对齐
+DerivePointerAlignment: false
+
+# 命名空间处理
+CompactNamespaces: false
+FixNamespaceComments: true
+NamespaceIndentation: None
+
+# Include 分类
+IncludeBlocks: Regroup
+IncludeCategories:
+  - Regex: '^<Windows\.h>'
+    Priority: 1
+    SortPriority: 0
+  - Regex: '^<(wrl|wil)/.*>'
+    Priority: 2
+    SortPriority: 0
+  - Regex: '^<.*\.h>'
+    Priority: 3
+    SortPriority: 0
+  - Regex: '^<.*>'
+    Priority: 4
+    SortPriority: 0
+  - Regex: '^".*"'
+    Priority: 5
+    SortPriority: 0
+IncludeIsMainRegex: '$'
+
+# 缩进相关
+IndentCaseBlocks: false
+IndentCaseLabels: false
+IndentExternBlock: AfterExternBlock
+IndentGotoLabels: true
+IndentPPDirectives: BeforeHash
+IndentWrappedFunctionNames: false
+
+# 保持空行
+KeepEmptyLinesAtTheStartOfBlocks: true
+MaxEmptyLinesToKeep: 1
+
+# 指针对齐
+PointerAlignment: Left
+
+# 空格的使用
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: true
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 1
+SpacesInAngles: Never
+SpacesInConditionalStatement: false
+SpacesInContainerLiterals: false
+SpacesInCStyleCastParentheses: false
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+# C++标准
+Standard: c++20
+
+# 命名空间紧凑行数
+ShortNamespaceLines: 1
+
+# 排序 includes 和 using 声明
+SortIncludes: CaseSensitive
+SortUsingDeclarations: true

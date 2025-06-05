@@ -1,0 +1,16 @@
+{
+  "name": "Name",
+  "version": "0.1.0",
+  "description": "Project Description",
+  "homepage": "",
+  "dependencies": [
+    // 1. Direct dependencies
+    // "package-name",
+    // 2. Version constraints
+    // {
+    //   "name": "vulkan-memory-allocator",
+    //   "version>=": "certain version"
+    // },
+  ],
+  "builtin-baseline": "efb1e7436979a30c4d3e5ab2375fd8e2e461d541"
+}
